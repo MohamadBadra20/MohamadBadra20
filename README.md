@@ -1,3 +1,7 @@
+<p align="center">
+<img src="./avatar.jpeg" width="150" style="border-radius: 50%;" alt="Mohamad Badra">
+</p>
+
 <h1 align="center">Mohamad Badra</h1>
 <p align="center"><b>B.Sc. Mathematics (Data Science) — Saint Joseph University of Beirut</b><br>
 Applied Machine Learning · Neuroimaging · NLP · Customer Analytics</p>
