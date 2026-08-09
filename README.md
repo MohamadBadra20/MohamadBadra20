@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./avatar.jpeg" width="150" style="border-radius: 50%;" alt="Mohamad Badra">
+<img src="./avatar.png" width="150" alt="Mohamad Badra">
 </p>
 
 <h1 align="center">Mohamad Badra</h1>
