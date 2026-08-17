@@ -1,105 +1,96 @@
-<p align="center">
-<img src="./avatar.png" width="150" alt="Mohamad Badra">
-</p>
+# Mohamad Badra
 
-<h1 align="center">Mohamad Badra</h1>
-<p align="center"><b>B.Sc. Mathematics (Data Science) — Saint Joseph University of Beirut</b><br>
-Applied Machine Learning · Neuroimaging · NLP · Customer Analytics</p>
+**Data Science Graduate | Applied Machine Learning | AI | Neuroimaging**
 
-<p align="center">
-<a href="https://www.linkedin.com/in/mohamad-badra"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white"></a>
-<a href="mailto:mohamad.badra.au@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white"></a>
-<a href="./Mohamad_Badra_CV.pdf"><img src="https://img.shields.io/badge/CV-download-black?style=flat&logo=readdotcv&logoColor=white"></a>
-</p>
+B.Sc. Mathematics — Data Science, Saint Joseph University of Beirut (USJ)
+
+I am a Data Science graduate interested in applied machine learning, healthcare AI, neuroimaging, and natural language processing. I build end-to-end data science projects spanning data preprocessing, feature engineering, model development, evaluation, interpretability, and deployment. Projects emphasize documented pipelines, reproducible code, and leakage-aware evaluation.
+
+My main project is a Parkinson's disease classification pipeline using resting-state fMRI, complemented by projects in NLP, customer analytics, and predictive modeling.
+
+I am currently preparing for postgraduate study in Data Science and Machine Learning.
 
 ---
 
-I'm a data science graduate building end-to-end ML pipelines — from raw
-data (fMRI scans, tweets, transaction logs) to evaluated models to deployed apps. My
-final-year project used machine learning on resting-state fMRI to classify Parkinson's
-disease; outside of that I work across NLP and marketing/customer analytics. I'm applying
-to Master of Data Science programs in Australia for 2027 entry and am looking for
-research-adjacent, hands-on programs where I can keep working this way.
+## Professional Experience
 
-Every project below follows the same standard: a documented pipeline, leakage-safe
-evaluation, a written report, and reproducible code — not just a notebook that ran once.
+**Intern — TELEPATY & VIVA INTERNATIONAL**
+*May 2025 – Jul 2026 · Tripoli, North Lebanon*
 
-## Featured project
-
-### 🧠 [Parkinson's Disease Classification from Resting-State fMRI](https://github.com/MohamadBadra20/Parkinson-s-Disease-Prediction-using-MRI-Images-and-Machine-Learning) — Final Year Project
-
-End-to-end pipeline from raw BIDS fMRI data to a deployed diagnostic web app.
-fMRIPrep preprocessing → AAL-116 atlas ROI extraction → functional connectivity
-(6,670 features/subject) → 10 classifiers compared under a leakage-safe CV pipeline →
-soft-voting ensemble → Flask deployment with PDF reporting.
-
-**Recall = 1.00, F1 = 0.875 (SVM-linear)** on held-out test set · validated with 50-fold
-repeated CV (F1 = 0.757 ± 0.123) so the headline number isn't a lucky split.
-
-`Python` `Nilearn` `fMRIPrep` `scikit-learn` `imbalanced-learn` `Flask` `Docker`
+Gained exposure to software and web/mobile application development, Data Science, Machine Learning, and AI workflows, with introductory familiarity with databases, digital platform integration, FinTech/electronic payment systems, and technology project lifecycles.
 
 ---
 
-## Other projects, by domain
+## Featured Project
 
-<table>
-<tr>
-<td width="33%" valign="top">
+### 🧠 Parkinson's Disease Classification from Resting-State fMRI
+*Final Year Project · Supervised by Dr. Michel Abboud, Saint Joseph University of Beirut*
 
-**🗣️ NLP**
-### [CyberShield](https://github.com/MohamadBadra20/Cybershield-Cyberbullying-Detection)
-6-class cyberbullying detection on ~47.7k tweets. TF-IDF baselines vs. fine-tuned
-RoBERTa, SHAP/LIME explainability, FastAPI + web demo.
+End-to-end machine learning pipeline for Parkinson's disease classification using resting-state fMRI from 55 subjects (33 PD, 22 healthy controls).
 
-**85.0% accuracy** / 0.844 weighted F1 (RoBERTa) vs. 82.2% / 0.822 (best classical)
+- Preprocessed fMRI data using fMRIPrep and Docker (skull stripping, motion correction, slice-timing correction, MNI152 spatial normalization)
+- Extracted mean BOLD signals from 116 AAL brain regions and computed Pearson functional connectivity, generating 6,670 connectivity features per subject
+- Compared 10 classifiers using variance filtering, robust scaling, SMOTE, mutual-information feature selection, PCA, and cross-validation
+- **Held-out test set:** F1 = 0.875, ROC-AUC = 0.857 (linear SVM); PD recall = 1.00 for the soft-voting ensemble
+- Built **NeuroVision**, a Flask web app integrating the feature-extraction pipeline and ensemble model to generate PD probability predictions and downloadable PDF reports
 
-`RoBERTa` `TF-IDF` `SHAP/LIME` `FastAPI`
+**Technologies:** Python, scikit-learn, fMRIPrep, Docker, Nilearn, ANTs, imbalanced-learn, Flask, SQLite, ReportLab, FSLeyes
 
-</td>
-<td width="33%" valign="top">
+[Repository →](https://github.com/MohamadBadra20)
 
-**📊 Customer Analytics**
-### [CLV Analytics](https://github.com/MohamadBadra20/Customer-Lifetime-Value-Analytics)
-1M+ e-commerce transactions → RFM + BG/NBD & Gamma-Gamma CLV modeling → K-Means
-segmentation → value-tier classification → Apriori market-basket rules.
+---
 
-**81.0% accuracy** (Random Forest, tuned), 4-class value tiers · silhouette = 0.53 clustering
+## Other Projects
 
-`BG/NBD` `Gamma-Gamma` `K-Means` `Apriori`
+### 🗣️ CyberShield — Multi-Class Cyberbullying Detection
+NLP system classifying social media text into six cyberbullying categories (~47,700 labeled tweets). Compared TF-IDF classical models against a fine-tuned RoBERTa transformer (85.0% accuracy, 0.844 weighted F1). Applied SHAP/LIME for interpretability; deployed via FastAPI.
+**Technologies:** Python, scikit-learn, PyTorch, Transformers, NLTK, SHAP, LIME, FastAPI
+[Repository →](https://github.com/MohamadBadra20)
 
-</td>
-<td width="33%" valign="top">
+### 📊 Customer Lifetime Value Analytics
+End-to-end customer analytics pipeline on 1.05M+ e-commerce transactions. RFM analysis, BG/NBD and Gamma-Gamma models for 6-month CLV estimation, K-Means segmentation (silhouette = 0.530), and a tuned Random Forest classifier for value-tier prediction (81.0% accuracy, 0.812 F1-macro). Apriori association-rule mining for product bundling insights.
+**Technologies:** Python, pandas, NumPy, scikit-learn, Lifetimes, mlxtend, Matplotlib, Seaborn
+[Repository →](https://github.com/MohamadBadra20)
 
-**📈 Classification / Data Mining**
-### [Bank Marketing Prediction](https://github.com/MohamadBadra20/Bank-Marketing-Prediction)
-Term-deposit subscription prediction on the UCI Bank Marketing dataset. VIF +
-ANOVA feature selection, SMOTETomek vs. NearMiss under 7.1:1 class imbalance.
+### 📈 Bank Marketing Prediction
+*(Add a short technical description here — this project isn't detailed in your CV, so I've left it as a placeholder.)*
+[Repository →](https://github.com/MohamadBadra20)
 
-**86–88% accuracy**, 0.56–0.67 recall (SMOTETomek, 5 models compared)
-
-`scikit-learn` `imbalanced-learn` `XGBoost`
-
-</td>
-</tr>
-</table>
+---
 
 ## Skills
 
-| | |
-|---|---|
-| **Languages** | Python, SQL |
-| **ML / Stats** | scikit-learn, XGBoost, LightGBM, imbalanced-learn, statsmodels |
-| **Deep Learning / NLP** | PyTorch, HuggingFace Transformers (RoBERTa), SHAP, LIME |
-| **Neuroimaging** | fMRIPrep, Nilearn, ANTs, BIDS |
-| **Deployment** | Flask, FastAPI, Docker |
-| **Tools** | Jupyter, Git/GitHub, pandas, matplotlib/seaborn |
-
-## Education
-
-**B.Sc. Mathematics — Data Science**, Saint Joseph University of Beirut (USJ) · GPA 3.7/4 · Dean's Honor List (S4, S5, S6)
-Final Year Project: *Parkinson's Disease Classification from Resting-State fMRI*,
-supervised by Dr. Michel Abboud
+**Programming:** Python, C++, JavaScript
+**Data Science & Machine Learning:** scikit-learn, imbalanced-learn, feature engineering, feature selection, dimensionality reduction, classification, regression, clustering, model evaluation, cross-validation
+**Deep Learning & NLP:** PyTorch, Hugging Face Transformers, RoBERTa, NLTK, SHAP, LIME
+**Neuroimaging:** fMRIPrep, Nilearn, ANTs, BIDS, fMRI analysis, functional connectivity
+**Deployment:** Flask, FastAPI, Docker
+**Data Analysis & Visualization:** pandas, NumPy, Matplotlib, Seaborn
+**Tools:** Jupyter, Git, GitHub, SQLite
 
 ---
 
-<p align="center"><i>Full write-ups, figures, and reports are in each repo — start with the pinned Parkinson's project.</i></p>
+## Research Interests
+
+- Healthcare AI and medical machine learning
+- Neuroimaging and fMRI analysis
+- Applied machine learning
+- Natural language processing
+- Interpretable and reliable machine learning
+
+---
+
+## Education
+
+**Saint Joseph University of Beirut (USJ)**
+B.Sc. Mathematics — Option in Data Science
+GPA: 3.7/4.0 · Dean's Honor List: Semesters 4, 5 & 6
+
+**Final Year Project:** Parkinson's Disease Classification from Resting-State fMRI
+**Supervisor:** Dr. Michel Abboud
+
+---
+
+## Contact
+
+[LinkedIn](https://linkedin.com/in/mohamad-badra) · mohamad.badra.au@gmail.com
