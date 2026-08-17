@@ -1,185 +1,138 @@
-<div align="center">
-
 # Hi, I'm Mohamad Badra 👋
 
-### Data Science Graduate · Applied Machine Learning · Neuroimaging · NLP
+### Data Science Graduate · Machine Learning · Healthcare AI
 
 B.Sc. Mathematics — Data Science, Saint Joseph University of Beirut (USJ)
+**GPA: 3.7/4.0 · Dean's Honor List**
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-mohamad--badra-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/mohamad-badra)
-[![Email](https://img.shields.io/badge/Email-mohamad.badra.au%40gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:mohamad.badra.au@gmail.com)
-[![GPA](https://img.shields.io/badge/GPA-3.7%2F4.0-1B2A5E?style=flat-square)](#)
-[![Location](https://img.shields.io/badge/Based%20in-Tripoli%2C%20Lebanon-B5894A?style=flat-square)](#)
+I build end-to-end data science and machine learning projects spanning **data preprocessing, feature engineering, model development, evaluation, interpretability, and deployment**.
 
-</div>
+My main interests lie in **healthcare AI, neuroimaging, applied machine learning, and NLP**, with an emphasis on reproducible workflows and rigorous model evaluation.
 
-<br>
+Currently preparing for postgraduate study in **Data Science and Machine Learning**.
 
-I build end-to-end data science projects spanning data preprocessing, feature engineering, model development, evaluation, interpretability, and deployment — with a focus on **healthcare AI**, **neuroimaging**, and **NLP**. Projects emphasize documented pipelines, reproducible code, and leakage-aware evaluation.
-
-Currently preparing for postgraduate study in Data Science and Machine Learning.
-
-<br>
-
-## 💼 Professional Experience
-
-**Intern — TELEPATY & VIVA INTERNATIONAL**
-`May 2025 – Jul 2026` · Tripoli, North Lebanon
-
-Gained exposure to software and web/mobile application development, Data Science, Machine Learning, and AI workflows, with introductory familiarity with databases, digital platform integration, FinTech/electronic payment systems, and technology project lifecycles.
-
-<br>
+---
 
 ## 🧠 Featured Project
 
-<div align="center">
-
 ### Parkinson's Disease Classification from Resting-State fMRI
-*Final Year Project · Supervised by Dr. Michel Abboud, Saint Joseph University of Beirut*
 
-</div>
+**Final Year Project** · Supervised by Dr. Michel Abboud, Saint Joseph University of Beirut
 
-End-to-end machine learning pipeline for Parkinson's disease classification using resting-state fMRI from 55 subjects (33 PD, 22 healthy controls).
+An end-to-end machine learning pipeline for Parkinson's disease classification using resting-state fMRI and functional connectivity.
 
-- 🧬 Preprocessed fMRI data using fMRIPrep and Docker — skull stripping, motion correction, slice-timing correction, MNI152 spatial normalization
-- 🔗 Extracted mean BOLD signals from 116 AAL brain regions and computed Pearson functional connectivity → **6,670 connectivity features per subject**
-- ⚙️ Compared 10 classifiers using variance filtering, robust scaling, SMOTE, mutual-information feature selection, PCA, and cross-validation
-- 🌐 Built **NeuroVision**, a Flask web app integrating the feature-extraction pipeline and ensemble model for PD probability predictions and downloadable PDF reports
+* Preprocessed resting-state fMRI from **55 subjects** using fMRIPrep and Docker
+* Extracted mean BOLD signals from **116 AAL brain regions**
+* Generated **6,670 functional-connectivity features per subject**
+* Compared **10 machine learning classifiers** using feature selection, PCA, SMOTE, and cross-validation
+* Built **NeuroVision**, a Flask-based application for PD probability prediction and downloadable reports
 
-<div align="center">
+| Metric                           |    Result |
+| -------------------------------- | --------: |
+| F1-score — Linear SVM            | **0.875** |
+| ROC-AUC — Linear SVM             | **0.857** |
+| PD Recall — Soft-Voting Ensemble |  **1.00** |
 
-| Metric | Result |
-|---|---|
-| **F1-score** (linear SVM) | 0.875 |
-| **ROC-AUC** (linear SVM) | 0.857 |
-| **PD Recall** (soft-voting ensemble) | 1.00 |
+`Python` `scikit-learn` `fMRIPrep` `Docker` `Nilearn` `ANTs` `imbalanced-learn` `Flask` `SQLite`
 
-</div>
+**[View Project →](https://github.com/MohamadBadra20/Parkinsons-fMRI-Classification)**
 
-`Python` `scikit-learn` `fMRIPrep` `Docker` `Nilearn` `ANTs` `imbalanced-learn` `Flask` `SQLite` `ReportLab` `FSLeyes`
+---
 
-[**→ View Repository**](https://github.com/MohamadBadra20)
+## 📂 Selected Projects
 
-<br>
+### 🗣️ CyberShield — Multi-Class Cyberbullying Detection
 
-## 📂 Other Projects
+End-to-end NLP system for classifying approximately **47,700 social-media posts** into six cyberbullying categories.
 
-<table>
-<tr>
-<td width="50%" valign="top">
+* Compared TF-IDF-based Logistic Regression, Linear SVM, and Multinomial Naive Bayes
+* Fine-tuned **RoBERTa** for multi-class text classification
+* Achieved **85.0% test accuracy** and **0.844 weighted F1**
+* Applied **SHAP and LIME** for model interpretability
+* Deployed the system through a **FastAPI REST API**
 
-### 🗣️ CyberShield
-**Multi-Class Cyberbullying Detection**
+`Python` `PyTorch` `Transformers` `scikit-learn` `NLTK` `SHAP` `LIME` `FastAPI`
 
-NLP system classifying social media text into six cyberbullying categories (~47,700 labeled tweets). Compared TF-IDF classical models against a fine-tuned RoBERTa transformer.
+**[View Project →](https://github.com/MohamadBadra20/Cybershield-Cyberbullying-Detection)**
 
-**Result:** 85.0% accuracy · 0.844 weighted F1
-Applied SHAP/LIME for interpretability; deployed via FastAPI.
-
-`Python` `PyTorch` `Transformers` `NLTK` `SHAP` `LIME` `FastAPI`
-
-[Repository →](https://github.com/MohamadBadra20)
-
-</td>
-<td width="50%" valign="top">
+---
 
 ### 📊 Customer Lifetime Value Analytics
-**Segmentation & Prediction**
 
-End-to-end pipeline on 1.05M+ e-commerce transactions. RFM analysis, BG/NBD and Gamma-Gamma models for 6-month CLV estimation, K-Means segmentation, and Apriori rule mining.
+End-to-end customer analytics pipeline built on **1.05M+ e-commerce transactions**.
 
-**Result:** Silhouette 0.530 · 81.0% accuracy · 0.812 F1-macro
-Tuned Random Forest for customer value-tier prediction.
+* Applied **RFM analysis** for customer behavior profiling
+* Used **BG/NBD and Gamma-Gamma models** for six-month CLV estimation
+* Performed K-Means customer segmentation with a **0.530 silhouette score**
+* Built customer value-tier classifiers, achieving **81.0% accuracy and 0.812 macro-F1**
+* Applied **Apriori association-rule mining** to identify product co-purchase patterns
 
-`Python` `pandas` `scikit-learn` `Lifetimes` `mlxtend` `Seaborn`
+`Python` `pandas` `NumPy` `scikit-learn` `Lifetimes` `mlxtend` `Matplotlib` `Seaborn`
 
-[Repository →](https://github.com/MohamadBadra20)
+**[View Project →](https://github.com/MohamadBadra20/Customer-Lifetime-Value-Analytics)**
 
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+---
 
 ### 📈 Bank Marketing Prediction
-**Predictive Modeling**
 
-*(Add 2–3 bullets here: dataset size, approach, and headline metric, in the same style as the other projects.)*
+Machine learning project focused on predicting whether customers will subscribe to a bank term deposit.
 
-[Repository →](https://github.com/MohamadBadra20)
+* Performed exploratory data analysis, preprocessing, and outlier treatment
+* Applied **VIF-based multicollinearity analysis** and **ANOVA feature selection**
+* Addressed class imbalance using **SMOTETomek and NearMiss**
+* Compared multiple classification algorithms to evaluate predictive performance
 
-</td>
-<td width="50%" valign="top">
+`Python` `pandas` `NumPy` `scikit-learn` `imbalanced-learn` `Matplotlib` `Seaborn`
 
-</td>
-</tr>
-</table>
+**[View Project →](https://github.com/MohamadBadra20/Bank-Marketing-Prediction)**
 
-<br>
+---
 
-## 🛠️ Skills
-
-<div align="center">
+## 🛠️ Technical Toolkit
 
 **Programming**
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+Python · C++ · JavaScript
 
-**Data Science & ML**
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
-![pandas](https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+**Data Science & Machine Learning**
+scikit-learn · imbalanced-learn · Feature Engineering · Feature Selection · Classification · Regression · Clustering · Cross-Validation · Hyperparameter Tuning
 
 **Deep Learning & NLP**
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
-![Hugging Face](https://img.shields.io/badge/🤗%20Transformers-FFD21E?style=flat-square)
-![NLTK](https://img.shields.io/badge/NLTK-3776AB?style=flat-square)
+PyTorch · Hugging Face Transformers · RoBERTa · NLTK · SHAP · LIME
+
+**Data Analysis & Visualization**
+pandas · NumPy · Matplotlib · Seaborn · Plotly · Dash
 
 **Neuroimaging**
-![fMRIPrep](https://img.shields.io/badge/fMRIPrep-1B2A5E?style=flat-square)
-![Nilearn](https://img.shields.io/badge/Nilearn-B5894A?style=flat-square)
-![ANTs](https://img.shields.io/badge/ANTs-1B2A5E?style=flat-square)
+fMRIPrep · Nilearn · ANTs · Functional Connectivity · ROI Extraction · FSLeyes
 
-**Deployment**
-![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+**Deployment & Tools**
+Flask · FastAPI · Docker · Git · SQLite · Jupyter Notebook
 
-**Tools**
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
-
-</div>
-
-<br>
+---
 
 ## 🔬 Research Interests
 
-- Healthcare AI and medical machine learning
-- Neuroimaging and fMRI analysis
-- Applied machine learning
-- Natural language processing
-- Interpretable and reliable machine learning
+* **Healthcare AI & Medical Machine Learning**
+* **Neuroimaging & fMRI Analysis**
+* **Applied Machine Learning**
+* **Natural Language Processing**
+* **Interpretable & Reliable Machine Learning**
 
-<br>
+---
 
 ## 🎓 Education
 
-**Saint Joseph University of Beirut (USJ)**
-B.Sc. Mathematics — Option in Data Science
-GPA: 3.7/4.0 · Dean's Honor List: Semesters 4, 5 & 6
+### Saint Joseph University of Beirut (USJ)
+
+**Bachelor in Mathematics — Option: Data Science**
+GPA: **3.7/4.0 (85/100)**
+Dean's Honor List: **Semesters 4, 5 & 6**
 
 **Final Year Project:** Parkinson's Disease Classification from Resting-State fMRI
 **Supervisor:** Dr. Michel Abboud
 
-<br>
+---
 
-<div align="center">
+## 📬 Connect
 
-## 📬 Get in Touch
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/mohamad-badra)
-[![Gmail](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mohamad.badra.au@gmail.com)
-
-</div>
+[LinkedIn](https://www.linkedin.com/in/mohamad-badra) · [GitHub](https://github.com/MohamadBadra20)
